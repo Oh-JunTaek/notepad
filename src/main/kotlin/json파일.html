@@ -1,0 +1,23 @@
+1.json 파일 : 프로젝트의 assets 폴더나 raw 리소스 디렉터리에 넣고 읽을 수 있다.
+
+val json: String
+try {
+val inputStream: InputStream = assets.open("yourfile.json")
+json = inputStream.bufferedReader().use { it.readText() }
+} catch (e: IOException) {
+// Handle the exception
+}
+
+2. json 파싱하기.
+2-1 gson라이브러리 사용
+data class Person(val name: String, val age: Int)
+
+val gson = Gson()
+val person = gson.fromJson(jsonString, Person::class.java)
+
+2-2 jsonobject 클래스 사용
+val jsonObject = JSONObject(jsonString)
+val name = jsonObject.getString("name")
+val age = jsonObject.getInt("age")
+
+3. api 요청 결과 처리

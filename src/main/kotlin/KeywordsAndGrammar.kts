@@ -110,3 +110,4 @@ nullableString = null // 이것은 허용됩니다.
 val length: Int? = nullableString?.length//안전 호출 연산자(Safe Call Operator) ?.
 val length: Int = nullableString?.length ?: 0//엘비스 연산자(Elvis Operator)?:
 val length: Int = nullableString!!.length //강제 참조 연산자(Non-null Asserted Operator)!!:
+
