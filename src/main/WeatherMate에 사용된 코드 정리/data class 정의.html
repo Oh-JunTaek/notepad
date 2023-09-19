@@ -1,0 +1,15 @@
+코틀린에서 data class는 데이터 보관 목적에 중점을 둔 클래스입니다.
+이 클래스는 일반 클래스와 비슷하게 보이지만, 몇 가지 주요한 기능을 자동으로 제공합니다:
+
+equals()/hashCode() 함수
+data class의 모든 프로퍼티에 대해 equals()와 hashCode() 함수를 자동으로 생성합니다.
+이 기능은 객체가 논리적으로 동일한지 확인하는 데 유용합니다.
+
+toString() 함수
+data class에 대해 읽기 편한 문자열 표현을 생성하는 toString() 함수를 자동으로 생성합니다.
+
+복사(copy()) 함수
+각각의 data class에 대해 변경하려는 속성만 지정하여 객체의 복사본을 만드는 방법을 제공하는 copy() 함수를 자동으로 생성합니다.
+
+ComponentN 함수
+데이터 클래스의 각 프로퍼티에 접근하기 위한 componentN (component1(), component2(), ...) 메서드를 제공합니다.
